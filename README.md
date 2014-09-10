@@ -27,11 +27,11 @@ Planets in Orrery are represented by the following parameters:
 * Planetary radius
 * Orbital radius
 * Orbital period
-* Orbital inclination (translation up/down)
-* Orbital elevation (rotation about center)
-* Orbital ellipticity
-* Orbital ellipse rotation
-* Orbital phase (where the planet is with respect to other planets in the system)
+* Orbital inclination
+* Periapsis angle (how far from reference plane the farthest point on the orbit is)
+* Orbital eccentricity
+* Ascending node angle (where the orbit "crosses" the reference plane)
+* Mean anomaly (how far the planet is along its orbit at time t = 0)
 
 Currently Orrery only supports one planet, so many of these are moot.  This list also does not include every factor that may affect the system, but the goal is a reasonable simulation, not perfect physical replication.
 
@@ -60,7 +60,7 @@ _v0.1 goals_
 * Draw a map of the system, i.e. a picture of the planet going around the star
 * Draw a plot of the light curve, i.e. the flux observed by a very distant telescope
 * Approximations we’re okay with:
-* Star only has solar radius - no mass, luminosity yet
+* Star only has stellar radius - no mass, luminosity yet (or don't account for them in our calculations, anyway)
 * Planet only has planetary radius and orbital period
 * Orbit is on zero inclination
 * Orbit is perfectly circular
