@@ -5,6 +5,8 @@ Orrery is a planetary system simulator.  With it, you can specify stellar and pl
 
 Users can add a star to their system, and specify its parameters - mass, radius, luminosity, et cetera.  Once their star is in place, they begin to add planets.  Planets and orbits are also customizable, from mass to orbital ellipticity.  After a system is set up, users can view reports on their system.  Light curve plots and a map of the system are available to the user.  The application can be used to validate a theoretical expolanetary model or compare measured light curves with different models to compare fit.
 
+Pull requests and tickets are welcome!
+
 
 Stars
 -----
