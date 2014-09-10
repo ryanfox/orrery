@@ -5,6 +5,6 @@ package orrery;
  */
 public class Orrery {
     public static void main(String[] args) {
-        System.out.println("hello world");
+        System.out.println("Welcome to Orrery: a planetary system simulator!");
     }
 }
