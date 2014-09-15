@@ -4,8 +4,9 @@ import orrery.bodies.Planet;
 import orrery.bodies.Star;
 
 /**
- * Defines a planetary system.  The "plane of reference" is equal to the stellar equator.
+ * Defines a planetary system.  The "plane of reference" is equal to the stellar equator (i.e., the ecliptic).
  * @author ryanfox
+ * @author maxspolaor
  */
 public class PlanetarySystem {
     private Star star;
@@ -16,8 +17,8 @@ public class PlanetarySystem {
      * Create a 1-planet system.  Right now corresponds to the sun and earth.
      */
     public PlanetarySystem() {
-        star = new Star(1.9e30, 6.9e8, 3.8e26);
-        planet = new Planet(5.9e24, 6.4e6, 1.5e11, 3.2e7, 0, 0, 0, 0, 0);
+        star = new Star(1.9e30, 6.9e8, -26.74);
+        planet = new Planet(5.9e24, 6.4e6, 0, 0, 1.5e11);
         time = 0;
     }
 
@@ -47,5 +48,20 @@ public class PlanetarySystem {
     public void step() {
         time += 60 * 60 * 24;
     }
-
+    
+    
+    /**
+     * 
+     * Calculate orbital period of the 1-planet system.
+     * 
+     */
+    public double getPeriod() {
+    	
+    	2*math.
+    	pie*sqrt(a^3/G*(M_1+M_2))
+    	
+    	
+    	
+    }
+    
 }
