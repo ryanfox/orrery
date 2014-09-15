@@ -9,7 +9,7 @@ import orrery.bodies.Star;
  * @author maxspolaor
  */
 public class PlanetarySystem {
-	private final double G = 6.673e-11;
+    private static final double G = 6.673e-11;
     private Star star;
     private Planet planet;
     private double time;
@@ -49,18 +49,18 @@ public class PlanetarySystem {
     public void step() {
         time += 60 * 60 * 24;
     }
-    
-    
+
+
     /**
-     * 
+     *
      * Calculate orbital period of the 1-planet system.
-     * 
+     *
      */
     public double getPeriod() {
-    	
-    	double mu = G*(star.getMass() + planet.getMass());    	
-    	return 2*Math.PI*Math.sqrt(Math.pow(planet.getSemimajorAxis(), 3)/mu);     	    	
+
+        double mu = G * (star.getMass() + planet.getMass());
+        return 2 * Math.PI * Math.sqrt(Math.pow(planet.getSemimajorAxis(), 3) / mu);
     }
-    
-    
+
+
 }
