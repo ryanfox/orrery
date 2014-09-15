@@ -5,7 +5,9 @@ import org.junit.Test;
 
 /**
  * @author ryanfox
+ * @author maxspolaor
  */
+
 public class OrreryTest {
 
     /**

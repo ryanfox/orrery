@@ -9,6 +9,7 @@ import orrery.bodies.Star;
  * @author maxspolaor
  */
 public class PlanetarySystem {
+	private final double G = 6.673e-11;
     private Star star;
     private Planet planet;
     private double time;
@@ -57,11 +58,9 @@ public class PlanetarySystem {
      */
     public double getPeriod() {
     	
-    	2*math.
-    	pie*sqrt(a^3/G*(M_1+M_2))
-    	
-    	
-    	
+    	double mu = G*(star.getMass() + planet.getMass());    	
+    	return 2*Math.PI*Math.sqrt(Math.pow(planet.getSemimajorAxis(), 3)/mu);     	    	
     }
+    
     
 }
