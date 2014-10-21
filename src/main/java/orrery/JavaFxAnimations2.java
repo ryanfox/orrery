@@ -5,6 +5,8 @@ package orrery;
  * @author maxspolaor
  */
 import java.util.List;
+
+import javafx.animation.Interpolator;
 import javafx.animation.PathTransition;
 import javafx.animation.Timeline;
 import javafx.application.Application;
@@ -56,12 +58,12 @@ public class JavaFxAnimations2 extends Application {
     private PathTransition generatePathTransition(final Shape shape, final Path path) {
         final PathTransition pathTransition = new PathTransition();
         pathTransition.setDuration(Duration.seconds(8.0));
-        pathTransition.setDelay(Duration.seconds(2.0));
         pathTransition.setPath(path);
         pathTransition.setNode(shape);
-        pathTransition.setOrientation(PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT);
+        pathTransition.setOrientation(PathTransition.OrientationType.NONE);
         pathTransition.setCycleCount(Timeline.INDEFINITE);
         pathTransition.setAutoReverse(false);
+        pathTransition.setInterpolator(Interpolator.LINEAR);
         return pathTransition;
     }
 
