@@ -18,6 +18,12 @@ import javafx.stage.Stage;
 import javafx.util.Duration;
 
 public class JavaFxAnimations2 extends Application {
+    // dimensions of window
+    private final int width = 800;
+    private final int height = 600;
+
+    private final int orbitalRadius = 100;
+
     /**
      * Generate Path upon which animation will occur.
      *
@@ -32,14 +38,14 @@ public class JavaFxAnimations2 extends Application {
 
 
         for(int i = 0; i <= period; i++) {
-            x[i] =  (1 * Math.cos((i / period) * 2 * Math.PI)*100) + 500;
-            y[i] = (1 * Math.sin((i / period) * 2 * Math.PI)*100) + 500;
+            x[i] =  (1 * Math.cos((i / period) * 2 * Math.PI) * orbitalRadius) + width / 2;
+            y[i] = (1 * Math.sin((i / period) * 2 * Math.PI) * orbitalRadius) + height / 2;
             System.out.println(i + " " + x[i] + " " + y[i]);
         }
 
 
         final Path path = new Path();
-        path.getElements().add(new MoveTo(600.0, 500.0));
+        path.getElements().add(new MoveTo(width / 2 + orbitalRadius, height / 2));
         for (int i = 0; i< x.length; i++){
             path.getElements().add(new LineTo(x[i], y[i]));
         }
@@ -98,7 +104,7 @@ public class JavaFxAnimations2 extends Application {
         final Path path = generateCurvyPath(determinePathOpacity());
         group.getChildren().add(path);
         group.getChildren().add(circle);
-        group.getChildren().add(new Circle(500, 500, 5));
+        group.getChildren().add(new Circle(width / 2, height / 2, 5));
         final PathTransition transition = generatePathTransition(circle, path);
         transition.play();
     }
@@ -112,7 +118,7 @@ public class JavaFxAnimations2 extends Application {
     @Override
     public void start(final Stage stage) throws Exception {
         final Group rootGroup = new Group();
-        final Scene scene = new Scene(rootGroup, 1000, 1000, Color.GHOSTWHITE);
+        final Scene scene = new Scene(rootGroup, width, height, Color.GHOSTWHITE);
         stage.setScene(scene);
         stage.setTitle("JavaFX 2 Animations");
         stage.show();
